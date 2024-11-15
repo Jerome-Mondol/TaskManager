@@ -1,0 +1,233 @@
+:root {
+    --tooltip: attr(data-tooltip);
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    background: #e8edff;
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", "Helvetica New";
+    overflow: hidden;
+    position: relative;
+}
+
+.sidebar {
+    width: 7%;
+    height: 100vh;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.normal-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.icons {
+    font-size: 32px;
+}
+
+.menu-icon {
+    margin-top: 30px;
+}
+
+.profile-icons {
+    margin-bottom: 30px;
+}
+
+.sidebar-icon {
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+}
+
+
+.sidebar-icon:after {
+    content: var(--tooltip);
+    font-family: "Poppins", "Helvetica New";
+    font-size: 14px;
+    font-weight: 550;
+    top: 50%;
+    left: 90px;
+    background: #f0f0f0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 0 5px;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+}
+
+.sidebar-icon:hover:after {
+    display: block;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    width: calc(100% - 7%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12%;
+}
+
+.logo {
+    font-size: 17px;
+    margin-left: 50px;
+}
+
+.logo p {
+    font-size: 10px;
+    color: gray;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+}
+
+.navbar-icon {
+    font-size: 33px;
+    margin-right: 50px;
+}
+
+.dashboard-container {
+    position: absolute;
+    height: calc(100% - 12%);
+    width: calc(100% - 7%);
+    top: 12%;
+    left: 10%;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.task-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    margin-top: 7.2rem;
+    height: 100%;
+    width: 100%;
+}
+
+.tasks {
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tasks h1 {
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.main-task {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 4px 4px 0 0;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    overflow: hidden;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 20px;
+    align-items: center;
+    cursor: pointer;
+    padding: 7px 20% 7px 5px;
+    position: relative;
+    transition: .2s ease-in;
+    border: transparent;
+}
+
+.task:hover {
+    background: #fafafa;
+    border-bottom: 2px solid blueviolet;
+}
+
+.task h1 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    text-transform: none;
+    padding: 5px 0;
+}
+.task-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+}
+.task-icons i {
+    font-size: 15px;
+}
+.border {
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    transform: translate(-50%, -50%);
+    height: 50%;
+    width: 5px;
+    background: blueviolet;
+    margin-right: 0;
+}
+
+.add-task-btn {
+    background: #434343;
+    border: none;
+    padding: 5px 20px;
+    color: #fefefe;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.add-task-btn:active {
+    background: #333;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TaskUp | Jerome Mondol</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="icons">
+          <div class="menu-icon">
+            <i class="ri-menu-4-line sidebar-icon" data-tooltip="Home"></i>
+          </div>
+          <div class="normal-icons">
+            <i
+              class="ri-dashboard-fill sidebar-icon"
+              data-tooltip="Dashboard"
+            ></i>
+            <i class="ri-mail-line sidebar-icon" data-tooltip="Track"></i>
+            <i
+              class="ri-check-double-fill sidebar-icon"
+              data-tooltip="Done"
+            ></i>
+            <i class="ri-calendar-2-line sidebar-icon" data-tooltip="Date"></i>
+            <i class="ri-global-line sidebar-icon" data-tooltip="Global"></i>
+            <i class="ri-bar-chart-line sidebar-icon" data-tooltip="Graph"></i>
+          </div>
+          <div class="profile-icons">
+            <i class="ri-user-line sidebar-icon" data-tooltip="Profile"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navbar -->
+      <div class="navbar">
+        <div class="logo">
+          <span>Task Up</span>
+          <p>• Manage task easily</p>
+        </div>
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Dashboard</a>
+          <a href="#">Login</a>
+        </div>
+        <div class="profile-icon">
+          <i class="ri-user-line navbar-icon"></i>
+        </div>
+      </div>
+
+      <!-- Dashboard -->
+      <div class="dashboard-container">
+        <div class="dashboard">
+          <div class="task-list">
+            <div class="tasks">
+              <h1>Task</h1>
+              <button class="add-task-btn">Add task</button>
+              <div class="main-task">
+                <div class="border"></div>
+              </div>
+            </div>
+            <div class="tasks">
+              <h1>Done</h1>
+            </div>
+            <div class="tasks">
+              <h1>Left</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
