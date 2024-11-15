@@ -1,24 +1,39 @@
-let addTaskBtn = document.querySelector(".add-task-btn");
-addTaskBtn.addEventListener("click", () => {
-  let taskInput = prompt("Enter your task");
-  let child = document.createElement("div");
-  child.classList.add("task");
-  let poorChild = document.createElement("h1");
-  child.appendChild(poorChild);
-  let parent = document.querySelector(".main-task");
-  parent.appendChild(child);
-  poorChild.textContent = taskInput;
-//   let border = document.createElement("div");
-//   border.classList.add("border");
-//   child.appendChild(border);
+function taskManaging() {
+  let addTaskBtn = document.querySelector(".add-task-btn");
+  addTaskBtn.addEventListener("click", () => {
+    let taskInput = prompt("Enter your task");
+    if (taskInput === "" || taskInput.prompt == false) {
+      return;
+    }
+    let child = document.createElement("div");
+    let poorChild = document.createElement("h1");
+    let parent = document.querySelector(".main-task");
+    let icons = document.createElement("div");
+    let editButton = document.createElement("i");
+    let deleteButton = document.createElement("i");
 
-  let icons = document.createElement("div");
-  icons.classList.add("task-icons");
-  let deleteButton = document.createElement("i");
-  let editButton = document.createElement("i");
-  deleteButton.classList.add("ri-edit-line", "task-icon");
-  icons.appendChild(deleteButton);
-  editButton.classList.add("ri-delete-bin-line", "task-icon");
-  icons.appendChild(editButton);
-  child.appendChild(icons);
-});
+    child.classList.add("task");
+    child.appendChild(poorChild);
+    parent.appendChild(child);
+    poorChild.textContent = taskInput;
+
+    icons.classList.add("task-icons");
+    editButton.classList.add("ri-edit-line", "task-icon");
+    editButton.addEventListener("click", () => {
+        let newTask = prompt("Enter your new task");
+        if (newTask === "" || newTask.prompt == false) {
+          return;
+        }
+        poorChild.textContent = newTask;
+    })
+    icons.appendChild(editButton);
+
+    deleteButton.classList.add("ri-delete-bin-line", "task-icon");
+    deleteButton.addEventListener("click", () => {
+        child.remove(); 
+    });
+    icons.appendChild(deleteButton);
+    child.appendChild(icons);
+  });
+}
+taskManaging();

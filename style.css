@@ -17,7 +17,7 @@ html, body {
 }
 
 .main {
-    background: #e8edff;
+    background:  #cfd9fa;
     height: 100%;
     width: 100%;
     font-family: "Poppins", "Helvetica New";
@@ -134,6 +134,7 @@ html, body {
     align-items: center;
     height: 100%;
     width: 100%;
+    background: #e8edff;
 }
 
 .task-list {
